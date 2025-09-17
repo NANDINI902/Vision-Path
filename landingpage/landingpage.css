@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(130deg, black, #3d7479, #bde473);
+  color: #fff;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+.logo span {
+  color: #bde473;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav ul li a:hover {
+  color: #bde473;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 50px;
+  min-height: 80vh;
+}
+
+.hero-content {
+  flex: 1;
+}
+.hero-content h2 {
+  font-size: 38px;
+  font-weight: bold;
+}
+.hero-content h2 span {
+  color: #bde473;
+}
+.hero-content p {
+  margin: 20px 0;
+  line-height: 1.6;
+  max-width: 400px;
+  color: #ddd;
+}
+.hero-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.hero-content input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+}
+.hero-content button {
+  background: #bde473;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.hero-content button:hover {
+  background: #3d7479;
+}
+
+/* Hero Image */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  size-adjust: contain;
+}
+
+.hero-image img {
+  justify-items: contain;
+  max-width: 60%;
+  border-radius: 60px 200px 30px 100px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    margin-top: 30px;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+  }
+  nav ul li {
+    margin: 15px 0;
+    text-align: center;
+  }
+  .menu-toggle {
+    display: block;
+    color: #fff;
+  }
+  nav.active ul {
+    display: flex;
+  }
+}
